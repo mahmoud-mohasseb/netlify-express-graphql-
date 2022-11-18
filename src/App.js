@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useQuery, gql } from '@apollo/client';
+import { useEffect, useState } from 'react';
 
 const GET_LOCATIONS = gql`
 query GetHello {
@@ -29,10 +30,9 @@ query GetHello {
 // from = "/api/*"
 // to = "/.netlify/functions/:splat"
 // status = 200
-
-
 function App() {
   const { loading, error, data } = useQuery(GET_LOCATIONS);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :</p>;
 
