@@ -1,3 +1,8 @@
+
+# Starter netlify 
+netlify dev 
+- to run this command and go to path direct 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
