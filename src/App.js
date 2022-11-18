@@ -8,11 +8,18 @@ query GetHello {
 }
 `;
 
-
+// [build]
+// publish ='build'
+// command = 'npm run build'
 // functions='functions'
-// [dev]
-//     publish = "public"
-//     node_bundler = "esbuild"
+
+
+
+// [[redirects]]
+//     from = "/api/*"
+//     to = "/.netlify/functions/:splat"
+//     status = 200
+
 
 function App() {
   const { loading, error, data } = useQuery(GET_LOCATIONS);
