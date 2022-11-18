@@ -10,8 +10,8 @@ query GetHello {
 
 function App() {
   const { loading, error, data } = useQuery(GET_LOCATIONS);
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error :</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :</p>;
 
   return (
     <div className="App">

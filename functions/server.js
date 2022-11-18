@@ -21,7 +21,7 @@ var schema = buildSchema(`
 // The root provides a resolver function for each API endpoint
 var root = {
   hello: () => {
-    return 'Hello world Express grapgql on netlify !';
+    return 'Hello world Express graphql on netlify !';
   },
 };
 
