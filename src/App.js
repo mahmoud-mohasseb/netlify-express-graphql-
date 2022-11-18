@@ -8,9 +8,8 @@ query GetHello {
 }
 `;
 
-// command = 'npm run build'
+
 // functions='functions'
-// publish ='build'
 
 function App() {
   const { loading, error, data } = useQuery(GET_LOCATIONS);
