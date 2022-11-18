@@ -4,6 +4,6 @@ functions = "functions"
 publish = "build"
 
 [[redirects]]
-from = "/*"
-to = "/.netlify/functions/graphql"
-status = 200
+ from = "/api/*"
+ to = "/.netlify/functions/:splat"
+ status = 200
