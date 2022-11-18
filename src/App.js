@@ -10,6 +10,9 @@ query GetHello {
 
 
 // functions='functions'
+// [dev]
+//     publish = "public"
+//     node_bundler = "esbuild"
 
 function App() {
   const { loading, error, data } = useQuery(GET_LOCATIONS);

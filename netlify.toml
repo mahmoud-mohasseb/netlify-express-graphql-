@@ -1,10 +1,9 @@
 [build]
 publish ='build'
 command = 'npm run build'
+functions='functions'
 
-[dev]
-    publish = "public"
-    node_bundler = "esbuild"
+
 
 [[redirects]]
     from = "/api/*"
