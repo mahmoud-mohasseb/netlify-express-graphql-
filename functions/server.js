@@ -6,11 +6,54 @@ const { buildSchema } = require('graphql');
 // const mongoose = require('mongoose');
 
 // const { Schema, model } = mongoose;
+// mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
+
+// const blogSchema = new Schema({
+//     title: String,
+//     slug: String,
+//     published: Boolean,
+//     author: String,
+//     content: String,
+//     tags: [String],
+//     createdAt: Date,
+//     updatedAt: Date,
+//   });
+  
+// const Blog = model('Blog', blogSchema);
+
+// const article = new Blog({
+//     title: 'Awesome Post!',
+//     slug: 'awesome-post',
+//     published: true,
+//     content: 'This is the best post ever',
+//     tags: ['featured', 'announcement'],
+//     createdAt: new Date(),
+//     updatedAt: new Date(),
+//   });
+//   // Insert the article in our MongoDB database
+// async function mahmoud(event, context) {
+//     await article.save();
+//     const firstArticle = await Blog.findOne({
+//         title: 'Awesome Post!',
+//         slug: 'awesome-post',
+//         published: true,
+//         content: 'This is the best post ever',
+//         tags: ['featured', 'announcement'],
+//     });
+
+//     return {
+//         statusCode: 200,
+//         // body: firstArticle,
+//         body: JSON.stringify({
+//             firstArticle
+//         }),
+//     }
+// }
+
 
 const app = express();
-
 const bodyParser = require('body-parser');
-// mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
@@ -32,8 +75,11 @@ router.get('/', (req, res) => {
   res.end();
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+router.get('/mahmoud', (req, res) => res.json({ 
+    value: "hey",
+    email :"ghareb4@gmail.com"
+}));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
-
 router.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
