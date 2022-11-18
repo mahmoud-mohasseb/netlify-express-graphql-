@@ -3,14 +3,14 @@ const express = require('express');
 const serverless = require('serverless-http');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const { Schema, model } = mongoose;
+// const { Schema, model } = mongoose;
 
 const app = express();
 
 const bodyParser = require('body-parser');
-mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+// mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
