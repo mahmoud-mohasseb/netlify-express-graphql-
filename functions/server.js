@@ -3,11 +3,10 @@ const express = require('express');
 const serverless = require('serverless-http');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
-// const mongoose = require('mongoose');
 
+// const mongoose = require('mongoose');
 // const { Schema, model } = mongoose;
 // mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-
 
 // const blogSchema = new Schema({
 //     title: String,
@@ -69,17 +68,17 @@ var root = {
 };
 
 const router = express.Router();
-router.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<h1>Hello from Express.js!</h1>');
-  res.end();
-});
-router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
-router.get('/mahmoud', (req, res) => res.json({ 
-    value: "hey",
-    email :"ghareb4@gmail.com"
-}));
-router.post('/', (req, res) => res.json({ postBody: req.body }));
+// router.get('/', (req, res) => {
+//   res.writeHead(200, { 'Content-Type': 'text/html' });
+//   res.write('<h1>Hello from Express.js!</h1>');
+//   res.end();
+// });
+// router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+// router.get('/mahmoud', (req, res) => res.json({ 
+//     value: "hey",
+//     email :"ghareb4@gmail.com"
+// }));
+// router.post('/', (req, res) => res.json({ postBody: req.body }));
 router.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,

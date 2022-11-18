@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { useQuery, gql } from '@apollo/client';
 
@@ -7,30 +7,6 @@ query GetHello {
   hello
 }
 `;
-
-// [build]
-// publish ='build'
-// command = 'npm run build'
-// functions='functions'
-// 
-// [build]
-// command = "npm run build"
-// functions = "functions"
-// publish = "build"
-// 
-// [build]
-// publish = "public"
-// command = "echo No build command"
-// node_bundler = "esbuild"
-// [dev]
-// publish = "public"
-// node_bundler = "esbuild"
-
-// [[redirects]]
-// from = "/api/*"
-// to = "/.netlify/functions/:splat"
-// status = 200
-
 
 function App() {
   const { loading, error, data } = useQuery(GET_LOCATIONS);
