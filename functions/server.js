@@ -10,7 +10,7 @@ const { buildSchema } = require('graphql');
 const app = express();
 
 const bodyParser = require('body-parser');
-// mongoose.connect(process.env.PUBLIC_URL);
+// mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
