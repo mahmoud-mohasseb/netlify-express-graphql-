@@ -6,7 +6,7 @@ const { buildSchema } = require('graphql');
 
 // const mongoose = require('mongoose');
 // const { Schema, model } = mongoose;
-// mongoose.connect("mongodb+srv://mahmoud:Ayan2704@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+// mongoose.connect("mongodb+srv://mahmoud:...password@cluster0.b7skb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 // const blogSchema = new Schema({
 //     title: String,
