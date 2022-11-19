@@ -79,7 +79,7 @@ const router = express.Router();
 //     email :"ghareb4@gmail.com"
 // }));
 // router.post('/', (req, res) => res.json({ postBody: req.body }));
-router.use('/graphql', graphqlHTTP({
+router.use('/expressgraphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
   graphiql: true,

@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8888/.netlify/functions/server/graphql',
+  uri: 'http://localhost:8888/.netlify/functions/server/expressgraphql',
   cache: new InMemoryCache(),
 });
 
